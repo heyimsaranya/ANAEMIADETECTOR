@@ -1,65 +1,77 @@
 # **Anemia Screening & Health Monitoring System**
 
-This project is a **clinical-grade Flutter application** designed for non-invasive anemia screening. By combining **computer vision** (analyzing physiological sites) with **IoT sensor data**, the system provides a comprehensive, non-invasive health assessment.
+A **clinical-grade Flutter application** for **non-invasive anemia screening** and real-time health monitoring. This system integrates **computer vision analysis** of physiological sites with **IoT sensor data** to provide a comprehensive health assessment.
 
 ---
 
-### **🌟 Clinical Screening Methods**
-* **Ocular Conjunctiva Analysis:** Captures and analyzes the pallor of the lower eyelid conjunctiva using specialized image processing.
-* **Nail Bed & Palm Pallor Detection:** Visual assessment of peripheral perfusion and hemoglobin indicators via the `nail_capture` and `palm_capture` modules.
-* **IoT Vital Monitoring:** Real-time **SpO2** and **Heart Rate** data acquisition via **ESP32/Arduino** and the **MAX30102** sensor.
-* **Patient Questionnaire:** Structured data collection to supplement physiological markers for higher diagnostic accuracy.
+### **🌟 Clinical Screening Features**
+
+* **Conjunctiva Analysis:** Detects pallor in the lower eyelid to estimate hemoglobin levels using advanced image processing techniques.
+* **Nail Bed & Palm Pallor Detection:** Evaluates peripheral perfusion and hemoglobin indicators via the `nail_capture` and `palm_capture` modules.
+* **IoT-Based Vital Monitoring:** Real-time acquisition of **SpO2** and **Heart Rate** using **ESP32/Arduino** paired with the **MAX30102** sensor.
+* **Patient Questionnaire:** Collects structured patient data to enhance diagnostic accuracy alongside physiological assessments.
+
+---
 
 ### **🛠️ Technical Architecture**
-* **Frontend:** Flutter (Mobile & Web)
-* **State Management:** `Provider` / `ScanProvider` for real-time data flow and reactive UI updates.
-* **Backend:** **Firebase** (Authentication & Cloud Firestore) for secure patient records.
-* **Hardware Interface:** Serial communication support for **ESP32/Arduino** integration.
+
+* **Frontend:** Flutter (supports Mobile & Web platforms)
+* **State Management:** `Provider` / `ScanProvider` ensures real-time data flow and responsive UI updates.
+* **Backend:** **Firebase Authentication & Cloud Firestore** for secure, scalable patient data storage.
+* **Hardware Integration:** Supports serial communication with **ESP32/Arduino** for sensor-based measurements.
 * **Deployment:** Optimized for high-performance hosting on **Vercel**.
 
-### **📂 Key Project Modules**
-* `lib/screens/`: Core diagnostic UI, including specialized camera capture screens for conjunctiva, nails, and palms.
-* `lib/services/`: Manages `auth_service.dart` for security and `scan_provider.dart` for image/sensor data processing.
-* `assets/`: Storage for medical reference images, custom icons, and typography.
+---
+
+### **📂 Project Structure**
+
+* **`lib/screens/`** – Core diagnostic UI, including camera capture modules for conjunctiva, nails, and palms.
+* **`lib/services/`** – Includes `auth_service.dart` for authentication and `scan_provider.dart` for image and sensor data processing.
+* **`assets/`** – Stores medical reference images, custom icons, and typography resources.
 
 ---
 
 ### **🚀 Getting Started**
 
 #### **Prerequisites**
-* **Flutter SDK** (Latest Stable)
-* **Node.js** (Required for Vercel CLI deployment)
-* **ESP32/Arduino Hardware** for sensor-based features.
+
+* **Flutter SDK** (latest stable version)
+* **Node.js** (required for Vercel deployment)
+* **ESP32/Arduino hardware** (for sensor integration)
 
 #### **Installation**
-1.  **Clone & Install:**
-    ```bash
-    git clone https://github.com/your-username/anemia_app.git
-    cd anemia_app
-    flutter pub get
-    ```
-2.  **Run Locally:**
-    ```bash
-    flutter run
-    ```
+
+1. **Clone the repository & install dependencies**
+
+```bash
+git clone https://github.com/your-username/anemia_app.git
+cd anemia_app
+flutter pub get
+```
+
+2. **Run the application locally**
+
+```bash
+flutter run
+```
 
 ---
 
 ### **🌐 Web Deployment (Vercel)**
-To push updates to your live production environment, use the following workflow:
 
-1.  **Generate Release Build:**
-    ```bash
-    flutter build web --release
-    ```
-2.  **Deploy via CLI:**
-    ```bash
-    cd build/web
-    vercel --prod --force
-    ```
+1. **Build the Flutter web release**
+
+```bash
+flutter build web --release
+```
+
+2. **Deploy to Vercel**
+
+```bash
+cd build/web
+vercel --prod --force
+```
 
 ---
 
-### **📄 Research & Authorship**
-Developed as part of a **Biomedical Engineering** research initiative focusing on affordable, non-invasive diagnostic tools.
 
